@@ -35,7 +35,7 @@ public class Calculator { // Class that runs calculator
 
         System.out.println();
 
-        boolean quit = false;
+        boolean endCalculator = false;
 
         do { // do while loop to ensure calculator runs until user wants to stop
             System.out.print("Please enter one (M+, M-, MS, MR, %, /, *, +, -, SQRT, ^, Q): ");
@@ -142,10 +142,10 @@ public class Calculator { // Class that runs calculator
                 case "Q": // Case for quit
                     System.out.println();
                     System.out.println("Thank you for using the calculator.");
-                    quit = true;
+                    endCalculator = true;
                     break;
             }
         }
-        while (!quit); // Do while loop quit
+        while (!endCalculator); // Do while loop quit
     }
 }
