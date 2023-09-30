@@ -14,6 +14,9 @@ public class Calculator { // Class that runs calculator
         num2 = 0.0; // Initialize numbers
         stored = 0.0;
 
+        System.out.println("Welcome to the calculator.");
+        System.out.println();
+
         System.out.print("Please enter your first number: ");
         num1 = scanner.nextDouble(); // Read from user the number they input
 
@@ -62,20 +65,32 @@ public class Calculator { // Class that runs calculator
                     break;
                 case "M+": // Case for memory +
                     System.out.println();
-                    System.out.print("Please number you want to add to the stored value: ");
-                    num2 = scanner.nextDouble();
-                    result = stored + num2;
-                    System.out.println("Result of Memory+: " + result);
-                    System.out.println();
-                    break;
+                    if (stored == 0) {
+                        System.out.println("Stored value has not been changed.");
+                        System.out.println();
+                        break;
+                    } else {
+                        System.out.print("Please number you want to add to the stored value: ");
+                        num2 = scanner.nextDouble();
+                        result = stored + num2;
+                        System.out.println("Result of Memory+: " + result);
+                        System.out.println();
+                        break;
+                    }
                 case "M-": // Case for memory -
                     System.out.println();
-                    System.out.print("Please number you want to subtract from the stored value: ");
-                    num2 = scanner.nextDouble();
-                    result = stored + num2;
-                    System.out.println("Result of Memory-: " + result);
-                    System.out.println();
-                    break;
+                    if (stored == 0) {
+                        System.out.println("Stored value has not been changed.");
+                        System.out.println();
+                        break;
+                    } else {
+                        System.out.print("Please number you want to subtract from the stored value: ");
+                        num2 = scanner.nextDouble();
+                        result = stored - num2;
+                        System.out.println("Result of Memory-: " + result);
+                        System.out.println();
+                        break;
+                    }
                 case "%": // Case for percent
                     System.out.println();
                     System.out.print("Do you want multiply(*), divide(/), add(+), or subtract(-) the percent: ");
